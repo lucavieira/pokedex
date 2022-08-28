@@ -52,7 +52,7 @@ function App() {
     document.getElementById('pokemon-sprite').src = data.sprites.other.home.front_default
   }
 
-  useEffect(() => {response()}, [])
+  useEffect(() => response)
 
   const getPokemon = pokemon => {
     setPokemon(pokemon.target.value.toLowerCase())
