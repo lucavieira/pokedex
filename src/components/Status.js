@@ -9,6 +9,9 @@ const Status = styled.div`
         justify-content: center;
         align-items: center;
         gap: 10px;
+        flex-flow: row wrap;
+
+        margin-bottom: 20px;
 
         li {
             display: flex;

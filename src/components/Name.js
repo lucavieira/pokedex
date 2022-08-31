@@ -4,7 +4,7 @@ const Name = styled.strong`
     font-size: 24px;
     text-transform: capitalize;
 
-    margin-bottom: 5px;
+    margin-top: 20px;
 `
 
 export default Name

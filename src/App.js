@@ -7,6 +7,9 @@ import Status from "./components/Status";
 import Container from "./components/Container"
 import Botao from "./components/Botao"
 import Search from "./components/Search";
+import Titulo from "./components/Titulo";
+import GlobalStyle from "./styles/global"
+import Screen from "./components/Screen";
 
 import { useEffect, useState } from "react";
 import SearchBar from "./components/SearchBar";
@@ -60,7 +63,7 @@ function App() {
 
   return (
     <Container>
-      <h1>Pokedex</h1>
+      <Titulo>Pokedex</Titulo>
 
       <Search>
         <SearchBar 
@@ -76,8 +79,10 @@ function App() {
       </Search>
 
       <Pokemon>
-        <Sprite src="" alt="Pokemon" id="pokemon-sprite"></Sprite>
         <Name id="pokemon-name"></Name>
+        <Screen>
+          <Sprite src="" alt="Pokemon" id="pokemon-sprite"></Sprite>
+        </Screen>
         <Type id="pokemon-types">Type: {types}</Type>
         <Status>
           <ul className="pokemon-status">
@@ -90,6 +95,7 @@ function App() {
           </ul>
         </Status>
       </Pokemon>
+      <GlobalStyle />
     </Container>
   );
 }
