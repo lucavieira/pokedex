@@ -5,7 +5,6 @@ import Name from "./components/Name";
 import Type from "./components/Type";
 import Status from "./components/Status";
 import Container from "./components/Container"
-import Botao from "./components/Botao"
 import Search from "./components/Search";
 import Titulo from "./components/Titulo";
 import GlobalStyle from "./styles/global"
@@ -53,7 +52,7 @@ function App() {
     document.getElementById('pokemon-sprite').src = data.sprites.other.home.front_default
   }
 
-  useEffect(() => { response() }, [response]);
+  useEffect(() => { response() });
 
   const getPokemon = pokemon => {
     setPokemon(pokemon.target.value.toLowerCase())
@@ -73,7 +72,6 @@ function App() {
             getPokemon(pokemon)
           }}>
         </SearchBar>
-        <Botao onClick={() => response()}>Buscar</Botao>
       </Search>
 
       <Pokemon>
