@@ -32,8 +32,6 @@ function App() {
     const content = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     const data = await content.json()
 
-    console.log(data.stats)
-
     for(let index_type of data.types) {
       lista.push(index_type.type.name)
       setTypes(lista.join(', '))
@@ -55,7 +53,7 @@ function App() {
     document.getElementById('pokemon-sprite').src = data.sprites.other.home.front_default
   }
 
-  useEffect(() => { response() });
+  useEffect(() => { response() }, [0]);
 
   const getPokemon = pokemon => {
     setPokemon(pokemon.target.value.toLowerCase())
